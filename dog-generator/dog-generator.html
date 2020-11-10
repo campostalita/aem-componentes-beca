@@ -1,0 +1,21 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" data-sly-call='${templates.placeholder @ isEmpty = !properties.titleText}' />
+
+<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html" data-sly-call="${clientLib.css @ categories='dog-generator.Content'}" />
+
+
+<section class="container col-md-12">
+    <main class="all">
+        <article data-sly-attribute.class="row ${properties.alignImg}">
+            <div class="col-md-6 text-center ">
+                <img alt="imagem da raça do cachorro selecionado" class="rounded mx-auto d-block img-dog" data-breed="${properties.selectDog}">
+                </img>
+                <button class="btn text-center" onclick="selectDog()">${properties.buttonText}</button>
+            </div>
+            <div class="col-md-6">
+                <sly data-sly-resource="${'card' @ resourceType='beca/components/content/card'}" />
+            </div>
+        </article>
+    </main>
+</section>
+
+<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html" data-sly-call="${clientLib.js @ categories='dog-generator.Content'}" />

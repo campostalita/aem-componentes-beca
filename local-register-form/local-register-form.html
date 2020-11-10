@@ -1,0 +1,50 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" data-sly-call='${templates.placeholder @ isEmpty = !properties.buttonColor}' />
+
+<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html" data-sly-call="${clientLib.css @ categories='local-register-form.Content'}" />
+
+<section class="styleform">
+    <form id="form-data">
+        <div class="form-group">
+            <h1>Consultando CEP</h1>
+            <label for="name">Nome</label>
+            <input placeholder="Nome Completo" type="text" class="form-control" maxlength="100" id="name">
+        </div>
+        <div class="form-group">
+            <label for="age">Idade</label>
+            <input placeholder="Idade" type="text" class="form-control" maxlength="3" id="age">
+        </div>
+        <div class="form-group" data-sly-test="${properties.typePerson == 'cpf'}">
+            <label for="cpf">CPF</label>
+            <input placeholder="Digite seu CPF" type="text" class="form-control" maxlength="14" id="cpf" onblur="validaCPF(this.value)">
+        </div>
+        <div class="form-group" data-sly-test="${properties.typePerson == 'cnpj'}">
+            <label for="cnpj">CNPJ</label>
+            <input placeholder="Digite seu CNPJ" type="text" class="form-control" maxlength="18" id="cpnj" onblur="validaCNPJ(this.value)">
+        </div>
+        <div class="form-group">
+            <label for="cep">CEP</label>
+            <input placeholder="00000-000" type="text" class="form-control" maxlength="9" id="cep" onblur="getCep()">
+        </div>
+        <div class="form-group">
+            <label for="logradouro">Logradouro</label>
+            <input placeholder="Rua, Avenida ..." type="text" class="form-control" id="logradouro">
+        </div>
+        <div class="form-group">
+            <label for="bairro">Bairro</label>
+            <input placeholder="Bairro" type="text" class="form-control" id="bairro">
+        </div>
+        <div class="form-group">
+            <label for="localidade">Localidade</label>
+            <input placeholder="Cidade" type="text" class="form-control" id="localidade">
+        </div>
+        <div class="form-group" data-sly-test="${properties.state}">
+            <label for="uf">UF</label>
+            <input placeholder="Estado" type="text" class="form-control" id="uf">
+        </div>
+        </div>
+        <button id="adicionar-dados-form" class="btn" style="background-color:${properties.buttonColor @ context='styleString'};color:${properties.fontColor @ context='styleString'}">Adicionar</button>
+    </form>
+    <div id="form-preenchido" class="text-center d-flex">
+    </div>
+</section>
+<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html" data-sly-call="${clientLib.js @ categories='local-register-form.Content'}" />

@@ -1,0 +1,14 @@
+.styleform {
+    /* background-color: darkblue; */
+    width: 50vw;
+    padding: 25px;
+}
+
+.form-control {
+    background-color: #B7D5E5;
+    border-color: #084D6E;
+}
+
+.form-group h1 {
+    color: #084D6E;
+}

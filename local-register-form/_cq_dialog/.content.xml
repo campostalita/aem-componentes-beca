@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Local Register Form"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <state
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                        fieldDescription="Habilite o estado no formulário"
+                        name="./state"
+                        text="Habilitar o Estado no formulário?"
+                        value="{Boolean}true"
+                        uncheckedValue="{Boolean}false" />
+                    <typePerson
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/buttongroup"
+                        fieldDescription="Escolha a opção, pessoa física ou jurídica"
+                        fieldLabel="Pessoa Física ou Jurídica?"
+                        name="./typePerson"
+                        selectionMode="single">
+                        <items jcr:primaryType="nt:unstructured">
+                            <cpf jcr:primaryType="nt:unstructured"
+                                text="Pessoa Física"
+                                value="cpf"/>
+                            <cnpj
+                                jcr:primaryType="nt:unstructured"
+                                text="Pessoa Jurídica"
+                                value="cnpj" />
+                        </items>
+                    </typePerson>
+                        <buttonColor
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/form/colorpicker"
+                            fieldDescription="Escolha uma cor pro botão"
+                            fieldLabel="Escolha uma cor pro botão"
+                            name="./buttonColor"
+                            value="true"/>
+                        <fontColor
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/colorpicker"
+                        fieldDescription="Escolha uma cor para a fonte"
+                        fieldLabel="Escolha uma cor para a fonte"
+                        name="./fontColor"
+                        value="true"/>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

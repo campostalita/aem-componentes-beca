@@ -1,0 +1,22 @@
+<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html" data-sly-call="${clientLib.all @ categories='beca.Content'}" />
+
+<sly data-sly-use.infos="${'information-list.js' @ multifieldName='infos'}">
+
+    <sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" data-sly-call='${templates.placeholder @ isEmpty = !infos}' />
+
+    <section class="d-flex align-content-stretch flex-wrap information-list ${properties.thinComponent ? '' : 'fat-component'}" data-sly-list="${infos}">
+        <article class="col-12 col-sm-6 col-md-4 d-flex flex-column">
+            <header>
+                <h3 class="info-title">${item.properties.infoTitle}</h3>
+            </header>
+            <div>
+                <p class="info-description">${item.properties.infoDescription}</p>
+            </div>
+            <footer class="mt-auto">
+                <a data-sly-test="${item.properties.infoLink && item.properties.infoLinkTitle}" class="info-link" href="${item.properties.infoLinkTarget == 'phone' ? 'tel:' : '' }${item.properties.infoLink}" target="${item.properties.infoLinkTarget != 'phone' ? item.properties.infoLinkTarget : ''}">
+                        ${item.properties.infoLinkTitle}
+                    </a>
+            </footer>
+        </article>
+    </section>
+</sly>

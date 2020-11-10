@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Dog Generator"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <selectDog
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                        fieldLabel="Selecione uma raça para ver imagens dela"
+                        fieldDescription="Selecione uma raça de cachorro"
+                        name="./selectDog">
+                        <items jcr:primaryType="nt:unstructured">
+                            <affenpinscher
+                                jcr:primaryType="nt:unstructured"
+                                name="./affenpinscher"
+                                text="Affenpinscher"
+                                value="affenpinscher" />
+                            <akita
+                                jcr:primaryType="nt:unstructured"
+                                name="./akita"
+                                text="Akita"
+                                value="akita" />
+                            <beagle
+                                jcr:primaryType="nt:unstructured"
+                                name="./beagle"
+                                text="Beagle"
+                                value="beagle" />
+                            <boxer
+                                jcr:primaryType="nt:unstructured"
+                                name="./boxer"
+                                text="Boxer"
+                                value="boxer" />
+                            <dalmatian
+                                jcr:primaryType="nt:unstructured"
+                                name="./dalmatian"
+                                text="Dalmatian"
+                                value="dalmatian" />
+                            <doberman
+                                jcr:primaryType="nt:unstructured"
+                                name="./doberman"
+                                text="Doberman"
+                                value="doberman" />
+                            <husky
+                                jcr:primaryType="nt:unstructured"
+                                name="./husky"
+                                text="Husky"
+                                value="husky" />
+                            <pitbull
+                                jcr:primaryType="nt:unstructured"
+                                name="./pitbull"
+                                text="Pitbull"
+                                value="pitbull" />
+                            <pug
+                                jcr:primaryType="nt:unstructured"
+                                name="./pug"
+                                text="Pug"
+                                value="pug" />
+                            <shiba
+                                jcr:primaryType="nt:unstructured"
+                                name="./shiba"
+                                text="Shiba"
+                                value="shiba" />
+                        </items>
+                    </selectDog>
+                    <buttonText
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Digite um texto para seu botão"
+                        fieldDescription="Um botão para customizar em até 25 letras"
+                        maxlength="25"
+                        name="./buttonText" />
+                    <alignImg
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/buttongroup"
+                        fieldDescription="Alinhar imagem à direita ou esquerda?"
+                        fieldLabel="Selecione o lado que deseja que fique sua imagem"
+                        name="./alignImg"
+                        selectionMode="single">
+                        <items jcr:primaryType="nt:unstructured">
+                            <left jcr:primaryType="nt:unstructured"
+                                text="Esquerda"
+                                value=""
+                                name="./left" />
+                            <right
+                                jcr:primaryType="nt:unstructured"
+                                text="Direita"
+                                value="flex-row-reverse"
+                                name="./right" />
+                        </items>
+                    </alignImg>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

@@ -1,0 +1,37 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+    data-sly-call='${templates.placeholder @ isEmpty = !properties.titleText}' />
+
+<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html"
+    data-sly-call="${clientLib.all @ categories='beca.Content'}" />
+
+<section class="text-with-image ${properties.backgroundColor} ${properties.thinComponent ? '' : 'fat-component'}">
+    <article class="container">
+        <header class="row">
+            <div class="col text-with-image-title ${properties.titleLeftAlign ? 'ta-left' : '' }">
+                <h1 data-sly-test="${!properties.titleType || properties.titleType == 'h1'}">${properties.titleText}
+                </h1>
+                <h2 data-sly-test="${properties.titleType == 'h2'}">${properties.titleText}</h2>
+            </div>
+        </header>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="text-with-image-subtitle">
+                    <p>${properties.subtitle}</p>
+                </div>
+                <div class="text-with-image-describe" data-sly-test="${properties.describe}">
+                    <p>${properties.describe}</p>
+                </div>
+                <div data-sly-test="${properties.buttonLink && properties.buttonText}">
+                    <a class="btn" role="button" href="${properties.buttonLink}"
+                        target="${properties.buttonTarget}">${properties.buttonText}</a>
+                </div>
+            </div>
+            <div class="col-md-6 ${properties.invert ? 'order-first' : '' }">
+                <div class="text-with-image-img__core-v2">
+                    <sly
+                        data-sly-resource="${'text-with-image-img' @ resourceType='core/wcm/components/image/v2/image'}" />
+                </div>
+            </div>
+        </div>
+    </article>
+</section>

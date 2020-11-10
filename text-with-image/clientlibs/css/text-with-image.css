@@ -1,0 +1,59 @@
+.text-with-image {
+    position: relative;
+    color: #000000;
+    margin: auto;    
+    word-wrap: break-word;
+}
+
+.text-with-image .bg-dark-cyan,
+.text-with-image .bg-very-dark-blue {
+    color: #ffffff;
+}
+
+.text-with-image .text-with-image-title {
+    text-align: center;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    margin: 20px 0px;
+}
+
+.text-with-image .text-with-image-title.ta-left {
+    text-align: left;
+}
+
+.text-with-image .text-with-image-subtitle p,
+.text-with-image .text-with-image-describe p {
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+    padding-bottom: 30px;
+}
+
+.text-with-image .btn {
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+    padding: 8px 20px 0px;
+    min-width: 150px;
+    border-color: #2a767c;
+    border-radius: 0px;
+    color: #2a767c;
+}
+
+.text-with-image .btn:hover {
+    font-size: 1, 2rem;
+    line-height: 1.7rem;
+    padding: 8px 20px 0px;
+    min-width: 150px;
+    border-color: #2a767c;
+    background-color: #2a767c;
+    color: #fff;
+}
+
+.text-with-image .bg-dark-cyan .btn,
+.text-with-image .bg-very-dark-blue .btn {
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+.text-with-image img {
+    max-width: 100%;
+}

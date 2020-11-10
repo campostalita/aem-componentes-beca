@@ -1,0 +1,3 @@
+#base=js
+
+local-register-form.js

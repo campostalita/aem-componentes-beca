@@ -1,0 +1,3 @@
+#base=css
+
+text-with-image2.css

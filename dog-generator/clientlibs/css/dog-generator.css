@@ -1,0 +1,17 @@
+.all {
+    background-color: #DCDCDC;
+    padding: 20px;
+}
+
+.img-dog {
+    padding: 0px 30px 20px 30px;
+    width: 1000px;
+    height: 500px;
+    align-items: center;
+}
+
+.btn {
+    text-align: center;
+    background-color: #5474ae;
+    color: white;
+}

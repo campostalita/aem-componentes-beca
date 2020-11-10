@@ -1,0 +1,25 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" data-sly-call='${templates.placeholder @ isEmpty = !properties.title}'></sly>
+
+<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html" data-sly-call="${clientLib.all @ categories='beca.Content'}" />
+
+<section>
+    <article class="text-whit-image">
+        <div class="row">
+            <div class="col-md-12 title">${properties.titulo}</div>
+            <div class="col-md-6 subtitle">
+                <p>${properties.subtitulo}</p>
+            </div>
+            <div class="describe" data-sly-test="${properties.description}">
+                <p>${properties.description}</p>
+            </div>
+            <div data-sly-test="${properties.buttonLink && properties.buttonText">
+                <a class="btn" href="${properties.buttonLink}" role="button">${properties.buttonLink}</a>
+            </div>
+            <div class="col-md-6 img">
+                <div class="card-img__core-v2">
+                    <sly data-sly-resource="${'card-image' @ resourceType='core/wcm/components/image/v2/image'}"></sly>
+                </div>
+            </div>
+        </div>
+    </article>
+</section>

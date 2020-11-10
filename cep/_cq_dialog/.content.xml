@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Formulario de Cadastro Local"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <habilitaUF
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                    fieldDescription="Ira esconder o campo de UF caso seja habilitado"
+                    name="./habilitaUF"
+                    text="Esconder a UF?"
+                    value="{Boolean}true"
+                    uncheckedValue="{Boolean}false" />
+                    <pessoaFisicaJuridica
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                    fieldDescription="Ira trocar o campo de pessoa fisica para pessoa juridica caso seja habilitado"
+                    fieldLabel="Pessoa fisica ou juridica?"
+                    name="./pessoaFisicaJuridica"
+                    text="Trocar para pessoa juridica?"
+                    value="{Boolean}true"
+                    uncheckedValue="{Boolean}false">
+                    </pessoaFisicaJuridica>
+                    <botaoCorCombinacao
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                    fieldLabel="Cor das letras do botão"
+                    fieldDescription="Selecione a cor das letras do botão"
+                    name="./botaoCorCombinacao">
+                    <items jcr:primaryType="nt:unstructured">
+                        <whiteBlack
+                            jcr:primaryType="nt:unstructured"
+                            text="Fonte Branca e Fundo Preto"
+                            value="white-black" />
+                        <orangePurple
+                            jcr:primaryType="nt:unstructured"
+                            text="Fonte Laranja e Fundo Roxo"
+                            value="orange-purple" />
+                        <greenRed
+                            jcr:primaryType="nt:unstructured"
+                            text="Fonte Verde e Fundo Vermelho"
+                            value="green-red" />
+                    </items>
+                    </botaoCorCombinacao>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>
